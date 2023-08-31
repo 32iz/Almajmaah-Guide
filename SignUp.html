@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title> Sign Up Page </title>
+    <style media="screen">
+      body{
+        text-align: center;
+        font-family: cursive;
+        background: url('SU_BG.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #SU_tbl{
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 125px;
+        text-align: left;
+        font-size: 20px;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 10px;
+        border: solid 5px gray;
+        box-shadow: 0px 0px 10px #888888;
+        width: 450px;
+        height: 450px;
+      }
+      #tbl_header, #SU_btn{
+        text-align: center;
+        color: darkred
+      }
+      #box{
+        border-radius: 5px;
+        color: darkred;
+      }
+      #The_btn, #GB_btn{
+        color: darkred;
+        font-size: 15px;
+        padding: 3px 10px;
+        font-family: cursive;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+      }
+      #The_btn:hover{background-color: rgba(184,184,184,0.5);}
+      #GB_btn:hover{background-color: rgba(184,184,184,0.5);}
+    </style>
+  </head>
+  <body>
+    <form class="SU_form" action="insert.php" method="post">
+      <table id="SU_tbl">
+        <tr> <th id="tbl_header" colspan="2"> <h2>Sign Up</h2> </th> </tr>
+        <tr>
+          <td> <label>First Name</label> </td>
+          <td> <input id="box" type="text" name="F_Name" value="" placeholder="Required" required/> </td>
+        </tr>
+        <tr>
+          <td> <label>Middle Name</label> </td>
+          <td> <input id="box" type="text" name="M_Name" value="" placeholder="Required" required/> </td>
+        </tr>
+        <tr>
+          <td> <label>Last Name</label> </td>
+          <td> <input id="box" type="text" name="L_Name" value="" placeholder="Required" required/> </td>
+        </tr>
+        <tr>
+          <td> <label>Password</label> </td>
+          <td> <input id="box" type="password" name="Password" value="" placeholder="Required" required/> </td>
+        </tr>
+        <tr>
+          <td> <label>E-Mail</label> </td>
+          <td> <input id="box" type="email" name="Email" value="" placeholder="Required" required/> </td>
+        </tr>
+        <tr>
+          <td> <label>Phone</label> </td>
+          <td> <input id="box" type="tel" name="Phone" value="" placeholder="05XXXXXXXX"> </td>
+        </tr>
+        <tr>
+          <td> <label>Gender</label> </td>
+          <td> <input type="radio" name="Gender" value="Male" checked>Male <input type="radio" name="Gender" value="Female">Female </td>
+        </tr>
+        <tr>
+          <td> <label>Age</label> </td>
+          <td> <input id="box" type="number" name="Age" value="" placeholder="Required"> </td>
+        </tr>
+        <tr>
+          <td id="SU_btn" colspan="2">
+            <br> <a href="index.html"><button id="GB_btn" type="button" name="GoBack">&#10094; Go Back</button></a>
+            <input id="The_btn" type="submit" name="SignUp" value="Sign Up">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

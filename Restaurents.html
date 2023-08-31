@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://cdn.logwork.com/widget/clock.js"></script>
+    <meta charset="utf-8">
+    <title> Almajmaah Guide - Restaurents </title>
+    <style media="screen">
+    body{
+      background: url('BG1.jpg');
+    }
+      #Restaurents{
+        border: 1px;
+        width: 1500px;
+        font-family: "Cooper";
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #header{
+        border-radius: 30px;
+        color: goldenrod;
+        background: url('headerBG.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        background-color: black;
+        font-size: 70px;
+        height: 200px;
+      }
+      #Clock{
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        color: black;
+      }
+      #SignUp{
+        position: absolute;
+        color: silver;
+        left: 50%;
+        top: 170px;
+        font-size: 15px;
+        border: dotted 2px gray;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      #SignUp:hover{
+        color: black;
+        background-color: gray;
+        transition: 0.5s;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      #TheBar{
+        background-color: rgba(192,192,192,0.6);
+        border-radius: 10px;
+        text-align: center;
+        height: 50px;
+      }
+      #bar_Home, #bar_Res, #bar_Sh, #bar_Pa, #bar_He{
+        padding-left: 50px;
+        font-size: 30px;
+        text-align: center;
+      }
+      #AD3, #AD4{
+        width: 325px;
+        border: solid 1px black;
+        writing-mode: vertical-rl;
+        text-align: center;
+        font-size: 36px;
+        color: red;
+        font-weight: bold;
+      }
+      #Res_Cont{
+        border: dashed 5px gray;
+        background: rgba(255,255,255,0.6);
+        vertical-align: top;
+      }
+      #Tail{
+        border: 0px;
+        background: url('TBG.png');
+        background-size: 1500px 200px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      #Tail1, #Tail2{
+        padding: 10px;
+        font-weight: bold;
+        color: #b38c17;
+      }
+      #Res_tbl{
+        border-radius: 10px;
+        border: solid 3px;
+        margin: 30px;
+        background-color: silver;
+      }
+      #Res1_Pic, #Res2_Pic, #Res3_Pic, #Res4_Pic{
+        border-radius: 10px;
+        border: solid 2px white;
+      }
+      #MC_Pic, #HR_Pic, #AJ_Pic, #DO_Pic{
+        border-radius: 10px;
+        width: 200px;
+      }
+      #Res1_Des, #Res2_Des, #Res3_Des, #Res4_Des{
+        border-radius: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border: solid 2px white;
+        width: 550px;
+        font-weight: bold;
+      }
+      #Res1_Name, #Res2_Name, #Res3_Name, #Res4_Name{
+        color: #ab1d1d;
+      }
+      #Mid_Tail{
+        text-align: center;
+      }
+      #btns{
+        text-align: center;
+        padding-top: 10px;
+      }
+      #CU_btn{
+        background-color: rgba(184,184,184);
+        font-family: "Cooper";
+        font-weight: bold;
+        font-size: 15px;
+        border-radius: 10px;
+        box-shadow: 0 3px #999;
+        cursor: pointer;
+      }
+      #Up_btn{
+        background-color: rgba(184,184,184);
+        font-family: "Cooper";
+        font-weight: bold;
+        font-size: 30px;
+        border-radius: 10px;
+        box-shadow: 0 3px #999;
+        cursor: pointer;
+      }
+      #CU_btn:active {font-size: 14px; box-shadow: 0 1px #999;}
+      #CU_btn:hover {background-color: rgba(184,184,184,0.5);}
+      #Up_btn:active {font-size: 29px; box-shadow: 0 1px #999;}
+      #Up_btn:hover {background-color: rgba(184,184,184,0.5);}
+      a:link	{color: blue;}
+      a:visited {color: red;}
+      a:hover	{color: white;}
+      a:active{color: red;}
+      #Home_lnk:link {color: #6b580d; text-decoration: none;}
+      #Res_lnk:link {color: #6b580d; text-decoration: none;}
+      #Sh_lnk:link {color: #6b580d; text-decoration: none;}
+      #Pa_lnk:link {color: #6b580d; text-decoration: none;}
+      #He_lnk:link {color: #6b580d; text-decoration: none;}
+      #Home_lnk:visited {color: #6b580d; text-decoration: none;}
+      #Res_lnk:visited {color: #6b580d; text-decoration: none;}
+      #Sh_lnk:visited {color: #6b580d; text-decoration: none;}
+      #Pa_lnk:visited {color: #6b580d; text-decoration: none;}
+      #He_lnk:visited {color: #6b580d; text-decoration: none;}
+      #Home_lnk:hover {font-size: 35px; color: white; transition: 0.5s;}
+      #Res_lnk:hover {font-size: 35px; color: white; transition: 0.5s;}
+      #Sh_lnk:hover {font-size: 35px; color: white; transition: 0.5s;}
+      #Pa_lnk:hover {font-size: 35px; color: white; transition: 0.5s;}
+      #He_lnk:hover {font-size: 35px; color: white; transition: 0.5s;}
+      #Res1_Menu, #Res2_Menu, #Res3_Menu, #Res4_Menu{
+        visibility: hidden;
+        position: absolute;
+        margin-top: -5%;
+      }
+      #Res1_Pic:hover #MC_Pic{opacity: 0.5; transition: 0.3s;}
+      #Res1_Pic:hover #Res1_Menu{visibility: visible;  transition: 0.3s;}
+      #Res2_Pic:hover #HR_Pic{opacity: 0.5; transition: 0.3s;}
+      #Res2_Pic:hover #Res2_Menu{visibility: visible; transition: 0.3s;}
+      #Res3_Pic:hover #AJ_Pic{opacity: 0.5; transition: 0.3s;}
+      #Res3_Pic:hover #Res3_Menu{visibility: visible; transition: 0.3s;}
+      #Res4_Pic:hover #DO_Pic{opacity: 0.5; transition: 0.3s;}
+      #Res4_Pic:hover #Res4_Menu{visibility: visible; transition: 0.3s;}
+
+    </style>
+  </head>
+  <body>
+    <table id="Restaurents">
+      <tr>
+        <th id="header" colspan="3">
+          <label id="Clock">
+            <a id="Clock_lnk" href="https://logwork.com/current-time-in-al-majma-ah-saudi-arabia-ar-riyad"
+            class="clock-time" data-style="old-roman" data-size="190"
+            data-timezone="Asia/Riyadh" target="_blank">`</a>
+          </label>
+          <a href="SignUp.html"> <label id="SignUp">Sign Up</label> </a>
+          <label id="AG">Almajmaah Guide</label>
+        </th>
+      </tr>
+      <tr>
+        <td id="TheBar" colspan="3">
+          <label id="bar_Home"> <a id="Home_lnk" href="index.html">Home</a> </label>
+          <label id="bar_Res"> <a id="Res_lnk" href="Restaurents.html">Restaurents</a> </label>
+          <label id="bar_Sh"> <a id="Sh_lnk" href="Shopes.html">Shopes</a> </label>
+          <label id="bar_Pa"> <a id="Pa_lnk" href="Parks.html">Parks</a> </label>
+          <label id="bar_He"> <a id="He_lnk" href="Health.html">Health</a> </label>
+        </td>
+      </tr>
+      <tr>
+        <td id="btns" colspan="3">
+          <a href="#Tail"><button id="CU_btn" type="button" name="ConactUs">Contact Us</button></a>
+        <br><br></td>
+      </tr>
+      <tr>
+        <td id="AD3"> Advertisement Space </td>
+        <td id="Res_Cont">
+          <table id="Res_tbl">
+            <tr id="Res1">
+              <td id="Res1_Pic">
+                <img id="MC_Pic" src="MC.jpg">
+                <a href="https://www.mcdonalds.com/sa/en-sa/riyadh/full-menu.html" target="_blank">
+                  <div id="Res1_Menu"> >Click To See The Menu< </div>
+                </a>
+              </td>
+              <td id="Res1_Des">
+                <h2 id="Res1_Name"> McDonald's </h2>
+                <p>
+                  <ul>
+                    <li>A long-established fast food chain famous for its burgers and fries</li>
+                    <li>Opening Hours: Open 24 hours</li>
+                    <li>Tel: 9200 00001</li>
+                    <li> <a href="https://goo.gl/maps/FdD4FkAJX47b6jDX8" target="_blank">https://goo.gl/maps/FdD4FkAJX47b6jDX8</a> </li>
+                  </ul>
+                </p>
+              </td>
+            </tr>
+              <tr id="Res2">
+                <td id="Res2_Pic">
+                  <img id="HR_Pic" src="HR.jpg">
+                  <a href="https://www.herfy.com/pages/all-menu/pgid-1330341.aspx" target="_blank">
+                    <div id="Res2_Menu"> >Click To See The Menu< </div>
+                  </a>
+                </td>
+                <td id="Res2_Des">
+                  <h2 id="Res2_Name"> Herfy </h2>
+                  <p>
+                    <ul>
+                      <li>The Herfy chain of restaurants is one of the types of restaurants specialized in providing fast food.
+                          Such as burgers, both types of chicken and meat,and broasted,
+                          and is often a favorite restaurant for children.</li>
+                      <li>Opening Hours: 9AM - 2:30AM</li>
+                      <li>Tel: 920001111</li>
+                      <li> <a href="https://goo.gl/maps/VSfjLWJrpHQaxzo66" target="_blank">https://goo.gl/maps/VSfjLWJrpHQaxzo66</a> </li>
+                    </ul>
+                  </p>
+                </td>
+              </tr>
+              <tr id="Res3">
+                <td id="Res3_Pic">
+                  <img id="AJ_Pic" src="AJ.jpeg">
+                  <a href="https://www.google.com/maps/uv?pb=!1s0x3e2ac6264281df41%3A0xcc00c39f0d2151e4!3m1!7e115!4shttps%3A%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOykqzpzB8WUom0Ii5xUaVP07r23_n4Kx8GQFV3%3Dw356-h200-k-no!5z2YXZhtmK2Ygg2KfZhNij2KzYr9in2K8gLSDYqNit2KsgR29vZ2xl4oCP!15sCgIYIQ&imagekey=!1e10!2sAF1QipMuNIVhhOM7GM7qtZQEYSOgN7_jzT7GVYIWUDB_&hl=ar&sa=X&ved=2ahUKEwiM1Z6osaT0AhUKzaQKHVwIDD8Qoip6BAhAEAM#" target="_blank">
+                    <div id="Res3_Menu"> >Click To See The Menu< </div>
+                  </a>
+                </td>
+                <td id="Res3_Des">
+                  <h2 id="Res3_Name"> Al-Ajdad </h2>
+                  <p>
+                    <ul>
+                      <li>A restaurant serving popular dishes such as rice with chicken,
+                        rice with meat and others.</li>
+                      <li>Opening Hours: 8AM - 11PM</li>
+                      <li>Tel: 016 432 5555</li>
+                      <li> <a href="https://goo.gl/maps/4syqmb8T4vD2m4bX7" target="_blank">https://goo.gl/maps/4syqmb8T4vD2m4bX7</a> </li>
+                    </ul>
+                  </p>
+                </td>
+              </tr>
+              <tr id="Res4">
+                <td id="Res4_Pic">
+                  <img id="DO_Pic" src="DO.jpg">
+                  <a href="https://www.dominos.sa/en/pages/order/menu?gclid=CjwKCAiAs92MBhAXEiwAXTi255BbfE5XUgqVW5ESBFiDIKK2ZBrF4t6DAU_qYbKexMkuOxsJEaEKdhoCpGIQAvD_BwE#!/menu/category/viewall/" target="_blank">
+                    <div id="Res4_Menu"> >Click To See The Menu< </div>
+                  </a>
+                </td>
+                <td id="Res4_Des">
+                  <h2 id="Res4_Name"> Domino's Pizza </h2>
+                  <p>
+                    <ul>
+                      <li>Domino's Pizza, Inc.
+                         is an American multinational pizza restaurant chain founded in 1960.</li>
+                      <li>Opening Hours: 12PM - 1:30AM</li>
+                      <li>Tel: 9200 12345</li>
+                      <li> <a href="https://goo.gl/maps/nQRcrfiVwcsZf9Xs5" target="_blank">https://goo.gl/maps/nQRcrfiVwcsZf9Xs5</a> </li>
+                    </ul>
+                  </p>
+                </td>
+              </tr>
+          </table>
+        </td>
+        <td id="AD4"> Advertisement Space </td>
+      </tr>
+      <tr id="Tail">
+        <td id="Tail1">
+          <h2 id="h_CU"> Contact Us: </h2>
+          <ul id="l_CU">
+            <li> +966500500500 </li>
+            <li> AlmajmaahGuide@Gmail.com </li>
+          </ul>
+        </td>
+        <td id="Mid_Tail"> <a href="#header"><button id="Up_btn" type="button" name="GoUp">Go Up</button></a> </td>
+        <td id="Tail2">
+          <h2 id="h_FU"> Find Us in: </h2>
+          <ul id="l_FU">
+            <li> Snap: @AlmajmaahGuide </li>
+            <li> Insta: @AlmajmaahGuide </li>
+            <li> Twitter: @AlmajmaahGuide </li>
+            <li> Facebook: @AlmajmaahGuide </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
